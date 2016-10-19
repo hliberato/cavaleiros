@@ -1,0 +1,24 @@
+<style media="screen">
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: 1px solid #aaa;
+}
+</style>
+
+<%
+  remote = field_setting(model, field, :remote)
+  unless remote.blank?
+    field_remote_name = remote[:field]
+    fk = remote[:fk] || field.to_s
+    onchange = "updateFieldRemote('#{model_link(application, model)}', '#{model.underscore}', '#{fk}', '#{field_remote_name}', $('##{field.to_s}').val())"
+  end
+  onchangesettings = field_setting(model, field, :onchange)
+  onchange = onchangesettings unless onchangesettings.blank?
+
+	collection = field_collection(application, model, field, object)
+	
+	collection_selected = object.send(field.to_s)
+	
+	klass = field_setting(model, field, :class) || "input-xlarge"
+%>
+<%= form.select field, options_for_select(collection, collection_selected), {}, { :onchange => onchange, :multiple => true, :class => "select2-listtag #{klass}" } %>
+<%#= select_tag "#{model.underscore}[#{field.to_s}]", options_for_select(collection, collection_selected), { :onchange => onchange } %>

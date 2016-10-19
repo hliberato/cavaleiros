@@ -1,0 +1,142 @@
+# Notice
+rails g model Notice title:string subtitle:string content:text image:attachment
+rails g my_admin:model Notice
+
+# Product
+rails g model Product title:string subtitle:string content:text image:attachment
+rails g my_admin:model Product
+
+# Store
+rails g model Store title:string subtitle:string image:attachment phone:integer openingWeek:string closingWeek:string openingWeekend:string closingWeekend:string
+rails g my_admin:model Store
+
+# Adress
+rails g model Address address:string integer:integer complement:string state:string country:string phone:integer mobile:integer zipcode:string latitude:string longitude:string
+rails g my_admin:model Address
+
+# Social
+rails g model Social facebook:string instagram:string google:string pinterest:string snapchat:string twitter:string foursquare:string slideshare:string
+rails g my_admin:model Social
+
+# Service
+rails g model Service title:string content:text image:attachment
+rails g my_admin:model Service
+
+# Contact
+rails g model Contact name:string email:string phone:integer subject:string content:text
+rails g my_admin:model Contact
+
+# Newsletter
+rails g model Newsletter email:string
+rails g my_admin:model Newsletter
+
+# Person
+rails g model Person name:string born:string phone:integer email:string
+rails g my_admin:model Person
+
+# About
+rails g model About title:string subtitle:string content:text banner:attachment video:string
+rails g my_admin:model About
+
+# Mediabox
+rails g model Mediabox title:string subtitle:string order:integer image:attachment url:string externalUrl:boolean
+rails g my_admin:model Mediabox
+
+# Faq
+rails g model Faq question:string answer:string order:integer
+rails g my_admin:model Faq
+
+# Document
+rails g model Document title:string subtitle:string content:text file:attachment
+rails g my_admin:model Document
+
+---- um só modelo
+# Gallery
+rails g model Gallery title:string subtitle:string 
+rails g my_admin:model Gallery
+
+# Galleryelement
+rails g model Galleryelement title:string subtitle:string image:attachment gallery:references
+rails g my_admin:model Galleryelement
+-----
+
+# Client
+rails g model Client name:string logo:attachment url:string content:text
+rails g my_admin:model Client
+
+# Tag
+rails g model Tag title:string
+rails g my_admin:model Tag
+
+# Video
+rails g model Video title:string subtitle:string url:string
+rails g my_admin:model Video
+
+# Case
+rails g model Case title:string subtitle:string content:text image:attachment
+rails g my_admin:model Case
+
+# Customercare
+rails g model Customercare title:string title:string content:text
+rails g my_admin:model Customercare
+
+# Category
+rails g model Category title:string subtitle:string content:text image:attachment
+rails g my_admin:model Category
+
+# Advertising
+rails g model Advertising title:string image:attachment url:string
+rails g my_admin:model Advertising
+
+# Sponsor
+rails g model Sponsor title:string image:attachment url:string
+rails g my_admin:model Sponsor
+
+# Event
+rails g model Event title:string subtitle:string content:text target:string start:date end:date local:text url:string image:attachment
+rails g my_admin:model Event
+
+
+
+
+
+
+##### A ser implementado
+
+# Course
+rails g model Course title:string
+rails g my_admin:model Course
+
+# Survey
+rails g model Survey title:string
+rails g my_admin:model Survey
+
+# Sector
+rails g model Sector title:string
+rails g my_admin:model Sector
+
+# Resume
+rails g model Resume title:string
+rails g my_admin:model Resume
+
+# Retailer
+rails g model Retailer title:string
+rails g my_admin:model Retailer
+
+# Gallery
+rails g model Gallery title:string
+rails g my_admin:model Gallery
+
+# Page
+rails g model Page title:string
+rails g my_admin:model Page
+
+# User
+rails g model User email:string password:string name:string 
+rails g my_admin:model User
+
+rails g model Newstore name:string email:string possuiloja:boolean franquia:boolean nomefantasia:string ramoatividade:string areapretendida:string content:text 
+rails g my_admin:model Newstore
+
+rails g model Seo title:string description:text keywords:string
+rails g my_admin:model Seo

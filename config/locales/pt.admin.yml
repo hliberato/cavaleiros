@@ -1,0 +1,295 @@
+pt:
+  id: &id Código
+  title: &title Título*
+  subtitle: &subtitle Subtítulo
+  content: &content Conteúdo
+  image: &image Imagem
+  address: &address Endereço
+  number: &number Número
+  complement: &complement Complemento
+  state: &state Estado
+  country: &country País
+  phone: &phone Telefone
+  mobile: &mobile Celular
+  zincode: &zipcode CEP
+  name: &name Nome*
+  subject: &subject Assunto
+  born: &born Nascimento*
+  order: &order Ordem
+  question: &question Pergunta*
+  answer: &answer Resposta*
+  file: &file Arquivo
+  target: &target Público alvo
+  start: &start Início
+  end: &end Fim
+  social: &social Redes sociais
+  seo_title: &seo_title SEO Título
+  seo_description: &seo_description SEO Descrição
+  seo_keywords: &seo_keywords SEO Palavras-chave
+  activerecord:
+    applications:
+      my_admin:
+        content: "Modelos"
+    models:
+      my_admin:
+        locale: Local
+        locales: Locais
+      store: "Loja"
+      stores: "Lojas"
+      address: "Endereço"
+      addresses: "Endereços"
+      social: "Rede social"
+      socials: "Redes sociais"
+      service: "Serviço"
+      services: "Serviços"
+      contact: "Contato"
+      contacts: "Contatos"
+      newsletter: "Inscrição"
+      newsletters: "Inscrições"
+      product: "Produto"
+      products: "Produtos"
+      notice: "Notícia"
+      notices: "Notícias"
+      person: "Pessoa"
+      people: "Pessoas"
+      about: "Sobre"
+      abouts: "Sobre"
+      document: "Documento"
+      documents: "Documentos"
+      gallery: "Galeria"
+      galleries: "Galerias"
+      galleryelement: Item
+      galleryelements: Itens
+      client: "Cliente"
+      clients: "Clientes"
+      customercare: "SAC"
+      customercares: "SAC"
+      advertising: "Publicidade"
+      advertisings: "Publicidades"
+      sponsor: "Patrocínio"
+      sponsors: "Patrocínios"
+      video: "Vídeo"
+      videos: "Vídeos"
+      category: "Categoria"
+      categories: "Categorias"
+      event: Evento
+      events: Eventos
+    attributes:
+      my_admin/locale:
+        name: Nome
+        acronym: Acrônimo
+      my_admin/user:
+        full_name: "Nome"
+        first_name: '*Primeiro Nome'
+        last_name: 'Último Nome'
+        username: '*Usuário'
+        email: '*E-mail'
+        old_password: '*Senha Atual'
+        password: '*Nova Senha'
+        password_confirmation: '*Confirmação de Senha'
+        superuser: "Usuário Master"
+        active: "Ativo"
+        superuser_export: "Usuário Master"
+        active_export: "Ativo"
+        groups: "Grupos"  
+      my_admin/group:
+        name: "Nome*"
+        description: "Descrição"
+        permissions: "Permissões"
+      store:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        image: *image
+        address: *address
+        social: *social
+      address:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        address: "Logradouro"
+        number: *number
+        complement: *complement
+        state: *state
+        country: *country
+        phone: *phone
+        mobile: *mobile
+        zipcode: *zipcode
+      social:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+      service:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        content: *content
+        image: *image
+      contact:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        name: *name
+        phone: *phone
+        subject: *subject
+        content: *content
+      newsletter:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+      product:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        content: *content
+        image: *image
+      notice:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        content: *content
+        image: *image
+      person:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        name: *name
+        born: *born
+        phone: *phone
+      about:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        content: *content
+      mediabox:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        order: *order
+        image: *image
+      faq:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        question: *question
+        answer: *answer
+        order: *order
+      document:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        content: *content
+        file: *file
+      gallery:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        galleryelement: Item
+      galleryelement:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        image: *image
+      client:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        name: *name
+        content: *content
+      tag:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+      video:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+      case:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        content: *content
+        image: *image
+      customercare:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        content: *content
+      category:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        subtitle: *subtitle
+        content: *content
+        image: *image
+      advertising:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        image: *image
+      sponsor:
+        id: *id
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords
+        title: *title
+        image: *image
+      event:
+        id: *id
+        title: *title
+        subtitle: *subtitle
+        content: *content
+        target: *target
+        image: *image
+        start: *start
+        end: *end
+        seo_title: *seo_title
+        seo_description: *seo_description
+        seo_keywords: *seo_keywords

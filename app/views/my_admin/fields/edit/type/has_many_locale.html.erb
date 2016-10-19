@@ -1,0 +1,57 @@
+<style media="screen">
+  .tabs-locale{
+    border: 1px solid #dddddd;
+  }
+  .tabs-locale a{
+      border-radius: 0px 0px 0 0!important;
+    }
+</style>
+
+<% has_many_model = model.reflections[field.to_s].klass %>
+<% @locales ||= MyAdmin::Locale.all %>
+
+<% unless @locales.empty? %>
+  <div class="control-group">
+    <label class="control-label" for="">Campos multi-idioma</label>	
+    <div class="controls">
+      <div class="">
+        <ul class="nav nav-tabs" role="tablist">
+        <% @locales.each_with_index do |locale, index| %>
+          <li role="locale" class="<%= index == 0 ? 'active' : ''%> locale_<%= locale.acronym %>">
+            <a href="#locale_<%= locale.acronym %>" aria-controls="locale_<%= locale.acronym %>" role="tab" data-toggle="tab">
+              <%= locale.name %>
+            </a>
+          </li>
+        <% end %>
+        </ul>
+        <div class="tab-content tabs-locale">
+          <% 
+            @locales.each_with_index do |locale, index|
+              item = nil
+              object.send(field.to_sym).each do |obj|
+                item = obj if obj.locale_id == locale.id
+              end 
+              if item.blank?
+                item = object.send(field.to_sym).build 
+                item.locale = locale
+              end
+          %>
+          <div role="tabpanel" class="tab-pane <%= index == 0 ? 'active' : ''%>" id="locale_<%= locale.acronym %>">
+            <%= form.fields_for(field, item) do |has_many_form| %>
+              <%= has_many_form.hidden_field :locale_id %>
+              <% has_many_model.my_admin.fieldsets.each do |has_many_fieldset| %>
+            		<%= content_tag(:fieldset) do %>
+            			<%= content_tag(:legend, fieldset_title(application, has_many_model, has_many_fieldset[:name])) if has_many_fieldset.has_key? :name %>
+            			<% has_many_fieldset[:fields].each do |has_many_field| %>
+            			  <%= edit_field_struct(application, has_many_model, has_many_field, item, has_many_form ) %>
+            			<% end %>
+            		<% end %>
+            	<% end %>
+            <% end %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
