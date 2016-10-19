@@ -1,0 +1,6 @@
+pt-BR:
+  admin:
+    actions:
+      dashboard:
+        title: Dashboard
+        breadcrumb: Breadcrumb
